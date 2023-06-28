@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Karla:wght@400;700&family=Kumbh+Sans&family=Montserrat:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+    align-items: center;
+    justify-self: center;
+}
+
+main{
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(2, 15vw);
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "block1 block1"
+                         "block2 block3";
+    margin: 5em auto;
+    box-shadow: 13px 13px 20px 6px rgb(237 238 249);
+}
+
+/*block1*/
+.block1{
+    grid-area: block1;
+    background: white;
+    border-radius: 1em 1em 0 0;
+    padding: 2em;
+}
+
+.block1 h1{
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(179, 62%, 43%);
+    padding-bottom: 1em;
+}
+.block1 h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+    padding-bottom: 0.5em;
+}
+.block1 p{
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(218, 22%, 67%);
+    line-height: 1.4;
+}
+
+/*block2*/
+.block2{
+    grid-area: block2;
+    background: hsl(179, 62%, 43%);
+    border-radius: 0 0 0 1em;
+    padding: 2em;
+}
+
+.block2 h1{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    padding-bottom: 1em;
+}
+.payment{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 0.4em;
+}
+.payment .price{
+    font-size: 34px;
+    font-weight: 700;
+    color: white;
+    margin-right: 0.6em;
+}
+.payment .month{
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(218, 22%, 67%);
+}
+.block2 p{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    padding-bottom: 1.8em;
+}
+.btn{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background: hsl(71, 73%, 54%);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1.8em 0 0 0;
+}
+.btn p{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background: hsl(218, 22%, 67%);
+}
+
+/*block3*/
+.block3{
+    grid-area: block3;
+    background: hsl(218, 22%, 67%);
+    border-radius: 0 0 1em 0;
+    padding: 2em;
+}
+.block3 h1{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    padding-bottom: 1em;
+}
+.block3 p{
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(204, 43%, 93%);
+    line-height: 1.4;
+}
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (max-width: 600px) {
+
+        main{
+            grid-template-columns: 70vw;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas:"block1"
+                                "block2"
+                                "block3"                
+        }
+        .block2{
+            border-radius: 0;
+        }
+        .block3{
+            border-radius: 0 0 1em 1em;
+        }
+    }
